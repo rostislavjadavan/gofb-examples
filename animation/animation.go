@@ -13,23 +13,28 @@ func main() {
 	}
 	atlas.Scale = 2
 
-	var frameCounter int64 = 0
-	frame := 0
-	frameSize := gofb.NewPoint2(128, 170)
+	var frameUpdateTimeMs int64 = 0          // how much time elapsed
+	var frame = 0                            // current animation frame frame
+	var frameSize = gofb.NewPoint2(128, 170) // atlas frame region
 
 	for w.IsRunning() {
 		w.StartFrame()
 		w.Clear(gofb.NewColor(120, 220, 230, 255))
 
+		// calculate frame position in atlas
 		r := gofb.NewRegion(
 			frame*int(frameSize.X), 0,
 			int(frameSize.X), int(frameSize.Y))
+
+		// draw atlas region
 		atlas.DrawRegion(400, 250, r)
 
-		frameCounter += w.GetDeltaTimeMs()
-		if frameCounter > 200 {
+		frameUpdateTimeMs += w.GetDeltaTimeMs()
+		// if 100ms elapsed switch to next frame from atlas (and reset timer)
+		if frameUpdateTimeMs > 100 {
 			frame++
-			frameCounter = 0
+			frameUpdateTimeMs = 0
+			// there are 8 frames in atlas
 			if frame > 8 {
 				frame = 0
 			}
