@@ -27,31 +27,31 @@ func main() {
 		star.Draw(starPosX, starPosY)
 
 		speed := int(w.GetDeltaTimeMs())
-		if w.IsKey(gofb.KeyShift) {
+		if w.IsInput(gofb.KeyShift) {
 			speed = int(w.GetDeltaTimeMs()) / 5
 		}
 
-		if w.IsKey(gofb.KeyUp) {
+		if w.IsInput(gofb.KeyUp) {
 			if starPosY > 0 {
 				starPosY -= speed
 			}
 		}
-		if w.IsKey(gofb.KeyDown) {
+		if w.IsInput(gofb.KeyDown) {
 			if starPosY < w.Height - star.Height {
 				starPosY += speed
 			}
 		}
-		if w.IsKey(gofb.KeyLeft) {
+		if w.IsInput(gofb.KeyLeft) {
 			if starPosX > 0 {
 				starPosX -= speed
 			}
 		}
-		if w.IsKey(gofb.KeyRight) {
+		if w.IsInput(gofb.KeyRight) {
 			if starPosX < w.Width - star.Width {
 				starPosX += speed
 			}
 		}
-		if w.IsKey(gofb.KeyEscape) {
+		if w.IsInput(gofb.KeyEscape) {
 			w.Stop()
 		}
 
