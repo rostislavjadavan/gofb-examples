@@ -22,35 +22,42 @@ func main() {
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(187, 210, 24, 255))
+		w.Clear(gofb.NewColor(84, 197, 211, 255))
 
 		star.Draw(starPosX, starPosY)
 
+		speed := int(w.GetDeltaTimeMs())
+		if w.IsKey(gofb.KeyShift) {
+			speed = int(w.GetDeltaTimeMs()) / 5
+		}
+
 		if w.IsKey(gofb.KeyUp) {
 			if starPosY > 0 {
-				starPosY -= int(w.GetDeltaTimeMs())
+				starPosY -= speed
 			}
 		}
 		if w.IsKey(gofb.KeyDown) {
 			if starPosY < w.Height - star.Height {
-				starPosY += int(w.GetDeltaTimeMs())
+				starPosY += speed
 			}
 		}
 		if w.IsKey(gofb.KeyLeft) {
 			if starPosX > 0 {
-				starPosX -= int(w.GetDeltaTimeMs())
+				starPosX -= speed
 			}
 		}
 		if w.IsKey(gofb.KeyRight) {
 			if starPosX < w.Width - star.Width {
-				starPosX += int(w.GetDeltaTimeMs())
+				starPosX += speed
 			}
 		}
 		if w.IsKey(gofb.KeyEscape) {
 			w.Stop()
 		}
 
-		text.Draw("Use cursor keys to move, escape to exit", 100, 800, gofb.NewColor(0, 0, 0, 222))
+		text.Draw("Use cursor keys to move", 100, 720, gofb.NewColor(0, 0, 0, 222))
+		text.Draw("Hold shift to move slower", 100, 760, gofb.NewColor(0, 0, 0, 222))
+		text.Draw("Press escape to exit", 100, 800, gofb.NewColor(0, 0, 0, 222))
 
 		w.FinalizeFrame()
 	}
