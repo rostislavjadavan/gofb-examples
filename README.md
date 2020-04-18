@@ -14,7 +14,7 @@ http://github.com/rostislavjadavan/gofb-examples/tree/master/simple
 
 Load and scale different images.
 
-http://github.com/rostislavjadavan/gofb-examples/images
+http://github.com/rostislavjadavan/gofb-examples/tree/master/images
 
 ![](images/preview.jpg)
 
@@ -22,19 +22,19 @@ http://github.com/rostislavjadavan/gofb-examples/images
 
 Load a custom font and draw some text.
 
-http://github.com/rostislavjadavan/gofb-examples/text
+http://github.com/rostislavjadavan/gofb-examples/tree/master/text
 
 ![](text/preview.jpg)
 
 ## Animation
 
-http://github.com/rostislavjadavan/gofb-examples/animation
+http://github.com/rostislavjadavan/gofb-examples/tree/master/animation
 
 ![](animation/preview.gif)
 
 ## Tunnel
 
-http://github.com/rostislavjadavan/gofb-examples/tunnel
+http://github.com/rostislavjadavan/gofb-examples/tree/master/tunnel
 
 ![](tunnel/preview.jpg)
 
@@ -42,12 +42,12 @@ http://github.com/rostislavjadavan/gofb-examples/tunnel
 
 Move cute little star using keyboard
 
-http://github.com/rostislavjadavan/gofb-examples/keyboard
+http://github.com/rostislavjadavan/gofb-examples/tree/master/keyboard
 
 ![](keyboard/preview.gif)
 
 ## Mouse
 
-http://github.com/rostislavjadavan/gofb-examples/mouse
+http://github.com/rostislavjadavan/gofb-examples/tree/master/mouse
 
 ![](mouse/preview.gif)
