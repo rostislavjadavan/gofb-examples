@@ -35,7 +35,6 @@ func main() {
 	fth := float64(texture.Height)
 	ftw := float64(texture.Width)
 
-	// https://lodev.org/cgtutor/tunnel.html
 	for y := 0; y < H; y++ {
 		fy := float64(y)
 		for x := 0; x < W; x++ {
