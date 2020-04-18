@@ -19,7 +19,7 @@ func main() {
 		panic(err)
 	}
 
-	texture, err := gofb.NewSurfaceFromFile("../assets/pattern.png")
+	texture, err := gofb.NewSurfaceFromFile("../assets/pattern.jpg")
 	if err != nil {
 		panic(err)
 	}

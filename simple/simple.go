@@ -7,21 +7,24 @@ import (
 
 func main() {
 	w := gofb.NewWindow("go-fb", 1200, 900, false)
-	bg := gofb.NewSurface(600, 600)
+	bg := gofb.NewSurface(100, 100)
+	bg.Scale = 6
 
 	for y := 0; y < bg.Height; y++ {
 		for x := 0; x < bg.Width; x++ {
-			gray := uint8(rand.Intn(255))
-			bg.SetPixel(x, y, gofb.NewColor(gray, gray, gray, 255))
+			r := 100 + uint8(rand.Intn(155))
+			g := 100 + uint8(rand.Intn(155))
+			b := 100 + uint8(rand.Intn(135))
+			bg.SetPixel(x, y, gofb.NewColor(r, g, b, 255))
 		}
 	}
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(0, 0, 0, 255))
+		w.Clear(gofb.NewColor(120, 220, 230, 255))
 
 		bg.Draw(300, 150)
-		bg.Rotation += float32(w.GetDeltaTimeMs() / 10)
+		//bg.Rotation += float32(w.GetDeltaTimeMs() / 10)
 
 		w.FinalizeFrame()
 	}
