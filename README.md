@@ -6,7 +6,7 @@ http://github.com/rostislavjadavan/gofb
 
 ## Simple
 
-http://github.com/rostislavjadavan/gofb-examples/simple
+http://github.com/rostislavjadavan/gofb-examples/tree/master/simple
 
 ![](simple/preview.jpg)
 
