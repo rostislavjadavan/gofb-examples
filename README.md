@@ -32,6 +32,12 @@ http://github.com/rostislavjadavan/gofb-examples/tree/master/animation
 
 ![](animation/preview.gif)
 
+## Roguelike map rendering
+
+http://github.com/rostislavjadavan/gofb-examples/tree/master/roguelike
+
+![](roguelike/preview.jpg)
+
 ## Tunnel
 
 http://github.com/rostislavjadavan/gofb-examples/tree/master/tunnel

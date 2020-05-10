@@ -1,4 +1,4 @@
-module github.com/rostislavjadavan/gofb-examples/mouse
+module github.com/rostislavjadavan/gofb-examples/rogulike
 
 go 1.14
 
