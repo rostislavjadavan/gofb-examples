@@ -8,6 +8,10 @@ github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 h1:DACJavvAHhabrF0
 github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0/go.mod h1:E/TSTwGwJL78qG/PmXZO1EjYhfJinVAhrmmHX6Z8B9k=
 github.com/rostislavjadavan/gofb v1.0.2 h1:5BK1x68+IaEkox5KV1rUchmqr4SDeel8Yxju303nQL0=
 github.com/rostislavjadavan/gofb v1.0.2/go.mod h1:gWNkTso7yOOPDEjtHgi3MkRly+164vrs6wDHd3lngVE=
+github.com/rostislavjadavan/gofb v1.1.0 h1:Ugwl8hnvwiXAhcUtGEq+2zpgKYeLdKTtGBNksHnc6gE=
+github.com/rostislavjadavan/gofb v1.1.0/go.mod h1:gWNkTso7yOOPDEjtHgi3MkRly+164vrs6wDHd3lngVE=
+github.com/rostislavjadavan/gofb v1.1.1 h1:geQzfA5L5necxQ43QZOC0F7vbN9y0l20R8fMELk/eGg=
+github.com/rostislavjadavan/gofb v1.1.1/go.mod h1:gWNkTso7yOOPDEjtHgi3MkRly+164vrs6wDHd3lngVE=
 golang.org/x/image v0.0.0-20200119044424-58c23975cae1 h1:5h3ngYt7+vXCDZCup/HkCQgW5XwmSvR/nA2JmJ0RErg=
 golang.org/x/image v0.0.0-20200119044424-58c23975cae1/go.mod h1:FeLwcggjj3mMvU+oOTbSwawSJRM1uh48EjtB4UJZlP0=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
