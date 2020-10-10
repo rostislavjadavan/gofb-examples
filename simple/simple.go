@@ -15,13 +15,13 @@ func main() {
 			r := 100 + uint8(rand.Intn(155))
 			g := 100 + uint8(rand.Intn(155))
 			b := 100 + uint8(rand.Intn(135))
-			bg.SetPixel(x, y, gofb.NewColor(r, g, b, 255))
+			bg.SetPixel(x, y, gofb.NewColor3(r, g, b))
 		}
 	}
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(120, 220, 230, 255))
+		w.Clear(gofb.NewColor3(120, 220, 230))
 
 		bg.Draw(300, 150)
 		//bg.Rotation += float32(w.GetDeltaTimeMs() / 10)

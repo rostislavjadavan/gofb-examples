@@ -44,11 +44,10 @@ func main() {
 		panic(err)
 	}
 
-	tileset, err := gofb.NewSpriteSheetFromFile("../assets/roguelike.png")
+	tileset, err := gofb.NewSpriteSheetFromFile("../assets/roguelike.png", TILE_WIDTH, TILE_HEIGHT)
 	if err != nil {
 		panic(err)
 	}
-	tileset.SetTileSize(TILE_WIDTH, TILE_HEIGHT)
 	tileset.Surface().Scale = TILE_SCALE
 
 	m := NewWorldMap(16, 10)
@@ -58,13 +57,13 @@ func main() {
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(0, 0, 0, 255))
+		w.Clear(gofb.NewColor3(0, 0, 0))
 
-		textBig.Draw("Roguelike", 216, 40, gofb.NewColor(198, 159, 40, 255))
+		textBig.Draw("Roguelike", 216, 40, gofb.NewColor3(198, 159, 40))
 
 		m.Render(216, 150, tileset)
 
-		text.Draw("HP: 100", 216, 700, gofb.NewColor(201, 102, 40, 255))
+		text.Draw("HP: 100", 216, 700, gofb.NewColor3(201, 102, 40))
 
 		w.FinalizeFrame()
 	}

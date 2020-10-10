@@ -49,7 +49,7 @@ func main() {
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(0, 0, 0, 255))
+		w.Clear(gofb.NewColor3(0, 0, 0))
 
 		shiftX := (int)(ftw + animation)
 		shiftY := (int)(fth + movement)
@@ -69,7 +69,7 @@ func main() {
 		movement += float64(w.GetDeltaTimeMs() / 50)
 
 		fps := strconv.Itoa(int(w.GetFPS()))
-		text.Draw("GOFB TUNNEL: Running "+fps+" frames per second", 100, 800, gofb.NewColor(0, 0, 0, 222))
+		text.Draw("GOFB TUNNEL: Running "+fps+" frames per second", 100, 800, gofb.NewColor3(0, 0, 0))
 
 		w.FinalizeFrame()
 	}

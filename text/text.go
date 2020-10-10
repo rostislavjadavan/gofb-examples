@@ -21,13 +21,13 @@ func main() {
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(100, 100, 100, 255))
+		w.Clear(gofb.NewColor3(100, 100, 100))
 
-		header.Draw("GOFB", 100, 40, gofb.NewColor(255, 255, 0, 255))
-		text.Draw("Simple framebuffer library", 100, 220, gofb.NewColor(200, 200, 200, 255))
+		header.Draw("GOFB", 100, 40, gofb.NewColor3(255, 255, 0))
+		text.Draw("Simple framebuffer library", 100, 220, gofb.NewColor3(200, 200, 200))
 
 		fps := strconv.Itoa(int(w.GetFPS()))
-		text.Draw("Running "+fps+" frames per second", 100, 800, gofb.NewColor(150, 150, 150, 255))
+		text.Draw("Running "+fps+" frames per second", 100, 800, gofb.NewColor3(150, 150, 150))
 
 		w.FinalizeFrame()
 	}

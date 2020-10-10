@@ -17,7 +17,7 @@ func main() {
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(120, 220, 230, 255))
+		w.Clear(gofb.NewColor3(120, 220, 230))
 
 		bird.Draw(200, 150)
 

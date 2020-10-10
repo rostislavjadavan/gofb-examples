@@ -7,20 +7,19 @@ import (
 func main() {
 	w := gofb.NewWindow("go-fb", 1200, 900, false)
 
-	spriteSheet, err := gofb.NewSpriteSheetFromFile("../assets/person_atlas.png")
+	spriteSheet, err := gofb.NewSpriteSheetFromFile("../assets/person_atlas.png", 128, 163)
 	if err != nil {
 		panic(err)
 	}
 
 	spriteSheet.Surface().Scale = 2
-	spriteSheet.SetTileSize(128, 163)
 
 	var frameUpdateTimeMs int64 = 0 // how much time elapsed
 	var frame = 0                   // current animation frame
 
 	for w.IsRunning() {
 		w.StartFrame()
-		w.Clear(gofb.NewColor(120, 220, 230, 255))
+		w.Clear(gofb.NewColor3(120, 220, 230))
 
 		spriteSheet.Surface().FlipHorizontal = false
 		spriteSheet.DrawTile(200, 250, frame, 0)
